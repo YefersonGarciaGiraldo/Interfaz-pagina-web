@@ -357,7 +357,7 @@ footer #copy{
 
 
 /* version desktop */
-@media(min-width: 601px )
+@media(min-width: 1200px )
 {
     /*header desktop */
     header{
@@ -505,7 +505,7 @@ footer #copy{
 }
 
 /* versión tablet / pantallas medianas */
-@media (min-width: 400px) and (max-width: 600px)
+@media (min-width: 800px) and (max-width: 1199px)
 
 {
     /* header tablet */
