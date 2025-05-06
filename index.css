@@ -9,29 +9,11 @@ html{
 body{margin: 0;}
 
 /* tamaños generales */
-h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-  }
-  
-  h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-  }
-  
-  h3 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-  }
-  
-  h4 {
-    font-size: clamp(1.25rem, 3.5vw, 2rem);
-  }
-  
-  p {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-  }
-  
-  li {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-  }  
+h1 { font-size: clamp(1.8rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.5rem, 4.5vw, 3rem); }
+h3 { font-size: clamp(1.25rem, 4vw, 2.5rem); }
+h4 { font-size: clamp(1rem, 3.5vw, 2rem); }
+p, li { font-size: clamp(0.9rem, 2.5vw, 1.5rem); }
 
 /* fuentes */
 #lema, h4 {font-family: "Open Sans";}
@@ -41,7 +23,7 @@ h2, h3{font-family: "Chau Philomene One";font-style:normal;}
 /* botones */
 button{
     font-family: "Open Sans";
-    font-size: 1.25em;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: bold;
     color: white;
     padding: 4px 7px;
@@ -100,7 +82,7 @@ header .logo{
     align-items: center;
 }
 #lema{
-    font-size: 7px;
+    font-size: clamp(0.75rem, 2vw, 1rem);
     text-align: center;
     align-items: center;
 }
@@ -116,7 +98,7 @@ header a{
     text-decoration: none;
     font-weight: bold;
     color: #6d6767;
-    font-size: 5px;
+    font-size: 0.75rem;
     align-items: center;
 }
 header a:hover {
@@ -137,7 +119,7 @@ header a:hover {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100dvh;
     background-image:
     linear-gradient(0deg, rgba(0,0,0,0.5),
      rgba(0,0,0,0.5)), url(img/alfombra.jpg);
@@ -147,6 +129,7 @@ header a:hover {
     font-size: 1.25em;
 }
 #hero h1{
+    font-size: clamp(2rem, 6vw, 5em);
     color: white;
 }
 
@@ -186,7 +169,7 @@ header a:hover {
 }
 #que-es li{
     padding-inline: 0px;
-    margin: 0x 0px;
+    margin: 0px 0px;
     text-align: left;
     list-style-type: circle;
 }
@@ -225,23 +208,20 @@ header a:hover {
 h4{
     margin-bottom: 5px;
     margin-top: 5px;
-    display: flex;
-    flex-direction: column;
     text-align: center;
     align-items: center;
-    font-size: clamp(0rem);
+    font-size: clamp(1rem, 2.5vw, 2rem);
 }
 #nube p{
     display: none;
 }
 .sub{ 
     font-family: "Open-Sans";
-    font-size: 7px;
+    font-size: 0.75rem;
 }
 
 /* ajustes de cartas seccion #programas */
 #nube .cartas {
-    background-position: center;
     background-size: cover;
     background-position: center center;
     padding: 10px 30px;
@@ -321,12 +301,12 @@ h4{
     border-radius: 17px;
 }
 #final h2{ 
-    font-size: 2.2em;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     padding: 0px;
     color: white;
 }
 #final button{
-    font-size: 3vh;
+    font-size: clamp(1rem, 3vh, 2rem);
 }
 
 /* ajustes footer */
@@ -365,7 +345,7 @@ footer a, footer p{
     text-decoration: none;
     font-weight: bold;
     color: #6d6767;
-    font-size: 7px;
+    font-size: clamp(0.50rem, 1vw, 0.5rem);
     align-items: center;
 }
 footer a:hover {
@@ -377,7 +357,7 @@ footer #copy{
 
 
 /* version desktop */
-@media(min-width: 1200px )
+@media(min-width: 601px )
 {
     /*header desktop */
     header{
@@ -400,7 +380,7 @@ footer #copy{
 
     /* #hero desktop */
     #hero button{
-        font-size: 7vh;
+        font-size: clamp(1.5rem, 5vw, 3rem);
         border-radius: 30px;
     }
     #hero h1{
@@ -450,11 +430,7 @@ footer #copy{
         padding:30px;
         padding-top: 20px;
     }
-    #que-es .container .container{
-        padding: 0px;
 
-
-    }
     #que-es .parrafo{
         text-align: left;
         padding: 0px;
@@ -526,4 +502,88 @@ footer #copy{
         padding-left: 30px;
     }
 
+}
+
+/* versión tablet / pantallas medianas */
+@media (min-width: 400px) and (max-width: 600px)
+
+{
+    /* header tablet */
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav {
+        display: flex;
+        gap: 10px;
+    }
+    header a {
+        font-size: 1rem;
+    }
+
+    /* hero tablet */
+    #hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+    #hero button {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+    }
+
+    /* quienes somos tablet */
+    #quienes-somos .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 60px 20px;
+    }
+    #quienes-somos .texto {
+        width: 60%;
+        max-width: 500px;
+        text-align: left;
+    }
+    #quienes-somos .img-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* que es tablet */
+    #que-es .parrafo {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    #que-es ul {
+        padding-left: 20px;
+    }
+
+    /* programas tablet */
+    #nube .orden, .orden2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    #nube .cartas {
+        flex: 1 1 45%;
+        margin: 10px;
+    }
+
+    /* final tablet */
+    #final .container {
+        padding-inline: 60px;
+        padding-block: 20px;
+    }
+
+    /* footer tablet */
+    footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 20px;
+    }
+    footer a, footer p {
+        font-size: 0.7rem;
+    }
 }
