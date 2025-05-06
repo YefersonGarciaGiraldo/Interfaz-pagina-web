@@ -9,12 +9,29 @@ html{
 body{margin: 0;}
 
 /* tamaños generales */
-h1{font-size: 3.5em; font-size: clamp(2.5rem, 6vw, 4rem);}
-h2{font-size: 2.7em;font-size: clamp(2.5rem, 6vw, 4rem);}
-h3{font-size:2em ;}
-h4{font-size:2em;}
-p{font-size: 1.25em;}
-li{font-size: 1.25em;}
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  h4 {
+    font-size: clamp(1.25rem, 3.5vw, 2rem);
+  }
+  
+  p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  
+  li {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }  
 
 /* fuentes */
 #lema, h4 {font-family: "Open Sans";}
