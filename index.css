@@ -77,7 +77,7 @@ header .logo{
     padding-bottom: 0px;
     font-weight: bold;
     color: #6d6767;
-    font-size: 1.6em ;
+    font-size: clamp(0.50rem, 1vw, 0.5rem);
     text-align: center;
     align-items: center;
 }
@@ -98,7 +98,7 @@ header a{
     text-decoration: none;
     font-weight: bold;
     color: #6d6767;
-    font-size: 0.75rem;
+    font-size: clamp(0.50rem, 1vw, 0.5rem);
     align-items: center;
 }
 header a:hover {
@@ -324,12 +324,11 @@ footer .logo{
     padding-bottom: 0px;
     font-weight: bold;
     color: #6d6767;
-    font-size: 1.6em ;
     text-align: center;
     align-items: center;
 }
 .container #lema-footer{
-    font-size: 7px;
+    font-size: 12px;
     text-align: center;
     align-items: center;
     padding-bottom: 10px;
