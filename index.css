@@ -360,7 +360,7 @@ footer #copy{
 
 
 /* version desktop */
-@media(min-width: 900px )
+@media(min-width: 1200px )
 {
     /*header desktop */
     header{
